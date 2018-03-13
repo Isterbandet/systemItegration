@@ -23,15 +23,4 @@ public double calculate(double a, double b, String operator)throws OperatorNotSu
     
 }     
     
-    
-    
-    
-    
-    
-
-
-
-}
-    
-    
-
+  

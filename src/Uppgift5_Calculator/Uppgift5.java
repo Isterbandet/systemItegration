@@ -9,14 +9,39 @@ public class Uppgift5 {
         Calculator calc = new Calculator();
         double förstaNr;
         double andraNr;
+        double resultat;
+        String operator;
+        String svar = "";
         
         
+        while(true){
         
+            System.out.println(svar + "\nSkriv ett utryck: ");
+            Scanner sc = new Scanner(System.in);
+            try {
+            förstaNr = sc.nextDouble();
+            operator = sc.next();
+            andraNr = sc.nextDouble();
+            resultat = calc.calculate(förstaNr, andraNr, operator);
+            svar = "svaret  blev " + resultat+ ". ";
+            }
+            catch (InputMismatchException e){
+                svar = "Gel format på indata" ;
+            }
+            catch (NoSuchElementException e) {
+                svar = "Kunde inte läsa indata" ;
+            }
+            catch (OperatorNotSupoerted e){
+                svar = e.getMessage();
+            }
+
+       }
+    }
+
     
-    
-    
-    
-    
+    public static void main(String[] args){
+        Uppgift5 ö = new Uppgift5();
     }
     
 }
+
