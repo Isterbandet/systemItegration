@@ -1,5 +1,5 @@
 
-package Uppgift8;
+package Uppgift8_WebbURL;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

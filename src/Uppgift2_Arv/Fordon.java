@@ -1,6 +1,6 @@
 
  
-package Vehicle;
+package Uppgift2_Arv;
 
 
 public abstract class Fordon implements IPrintable {

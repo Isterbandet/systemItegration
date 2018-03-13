@@ -1,5 +1,5 @@
 
-package Vehicle;
+package Uppgift2_Arv;
 
 public class Cykel extends Fordon implements IPrintable, IHjulburen {
     int antalVäxlar;

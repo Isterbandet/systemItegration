@@ -1,4 +1,4 @@
-package Uppgift4;
+package Uppgift4_SedlarochMynt;
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;

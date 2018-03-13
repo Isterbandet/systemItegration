@@ -1,5 +1,5 @@
 
-package Vehicle;
+package Uppgift2_Arv;
 
 public class Tåg extends Fordon implements IPrintable{
     int antalVagnar;

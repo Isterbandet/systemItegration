@@ -1,4 +1,4 @@
-package Uppgift3;
+package Uppgift3_Bensinförbrukning;
 import java.util.Scanner;
 
 

@@ -1,4 +1,4 @@
-package Uppgift7;
+package Uppgift7_SkrivtillFil;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

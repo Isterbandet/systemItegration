@@ -1,4 +1,4 @@
-package Vehicle;
+package Uppgift2_Arv;
 
 
 public interface IPrintable {

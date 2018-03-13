@@ -1,4 +1,4 @@
-package Vehicle;
+package Uppgift2_Arv;
 
 
 public class Båt extends Fordon implements IPrintable {
