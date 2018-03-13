@@ -1,3 +1,4 @@
+
 package Uppgift7_SkrivtillFil;
 
 import java.io.FileNotFoundException;
@@ -8,43 +9,41 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class uppgift7 {
+public class fileWriterTest {
     
-    public uppgift7 () {
     
+     public fileWriterTest() {
+        
         String firstLine;
         String secondLine;
         Path inFilePath= Paths.get("src\\Uppgift7_SkrivtillFil\\Personuppgifter.txt");
         Path outFilePath = Paths.get("src\\Uppgift7_SkrivtillFil\\test1.txt");
+
         
-        String[] personData;
+        String[] personDataParts;
         
-       try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath)))
+        //Try with resources, gamla sättet
+        //try(PrintWriter w = new PrintWriter(new BufferedWriter(
+        //        new FileWriter(outFilePathString)))){
+               
+        //Try with resources, nya sättet med Paths och Files
+        try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath)))
             {
-       
-       //try(PrintWriter w = new PrintWriter(new BufferedWriter(new FileWriter(outFilePath)))){
-       
-       
-        
-        
+
             Scanner fileScanner = new Scanner(inFilePath);
             
             while(fileScanner.hasNext()){
                 firstLine = fileScanner.nextLine();
                 if (fileScanner.hasNext()){
                     secondLine = fileScanner.nextLine();
-                    personData = secondLine.split(",");
-                    
-                    if(Integer.parseInt(personData[2].trim()) > 199){
-                        w.print(firstLine + "\n" + secondLine + "\n" );
-            
-            
+                    personDataParts = secondLine.split(",");
+
+                    if (Integer.parseInt(personDataParts[2].trim()) > 199){
+                        w.print(firstLine + "\n" + secondLine+ "\n");
                     }
-  
                 }
             }
         }
-
         catch (FileNotFoundException e){
             System.out.println("Filen kunde inte hittas");
             e.printStackTrace();
@@ -63,8 +62,8 @@ public class uppgift7 {
     }
     
     public static void main(String[] args){
-        uppgift7 ö = new uppgift7();
+        fileWriterTest ö = new fileWriterTest();
     }
-
- 
 }
+    
+

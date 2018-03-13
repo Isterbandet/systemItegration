@@ -8,3 +8,5 @@ Micke Nilsson, Xvägen 4, 12345 Ystad
 31, 69, 167
 Nisse Nilsson, Xvägen 5, 12345 Ystad
 23, 80, 205
+Örjan Lax, Xvägen 5, 12345 Ystad
+23, 80, 205
