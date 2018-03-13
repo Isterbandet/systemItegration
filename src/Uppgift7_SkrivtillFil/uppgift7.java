@@ -1,5 +1,6 @@
 package Uppgift7_SkrivtillFil;
 
+import java.io.BufferedWriter; //Varför var jag tvungen att importera den?
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,32 +13,34 @@ public class uppgift7 {
     
     public uppgift7 () {
     
-  String firstLine;
+        String firstLine;
         String secondLine;
         Path inFilePath= Paths.get("src\\Uppgift7\\Personuppgifter.txt");
-        Path outFilePath = Paths.get("src\\Uppgift7\\TallPeopleInformation.txt");
+        Path outFilePath = Paths.get("src\\Uppgift7\\Test1.txt");
         
-        String[] personDataParts;
+        String[] personData;
         
-               
-        //Try with resources, nya sättet med Paths och Files
-        try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath)))
-            {
-
+        try(PrintWriter w = PrintWriter(Files.newBufferedWriter(outFilePath))) 
+        {
+        
             Scanner fileScanner = new Scanner(inFilePath);
             
             while(fileScanner.hasNext()){
                 firstLine = fileScanner.nextLine();
                 if (fileScanner.hasNext()){
                     secondLine = fileScanner.nextLine();
-                    personDataParts = secondLine.split(",");
-
-                    if (Integer.parseInt(personDataParts[2].trim()) > 199){
-                        w.print(firstLine + "\n" + secondLine+ "\n");
+                    personData = secondLine.split(",");
+                    
+                    if(Integer.parseInt(personData[2].trim()) > 199){
+                        w.print(firstLine + "\n" + secondLine + "\n" );
+            
+            
                     }
+  
                 }
             }
         }
+
         catch (FileNotFoundException e){
             System.out.println("Filen kunde inte hittas");
             e.printStackTrace();
@@ -58,5 +61,4 @@ public class uppgift7 {
     public static void main(String[] args){
         uppgift7 ö = new uppgift7();
     }
-
 }

@@ -16,11 +16,13 @@ public class Uppgift5 {
         
         while(true){
         
-            System.out.println(svar + "\nSkriv ett utryck: ");
+            System.out.println(svar + "\nSkriv in ett värde du vill multiplicera,addera,dividera eller subtrahera: ");
             Scanner sc = new Scanner(System.in);
             try {
             förstaNr = sc.nextDouble();
+            System.out.println("Skriv om du vill / * + -");
             operator = sc.next();
+            System.out.println("Skriv in det andra värdet!");
             andraNr = sc.nextDouble();
             resultat = calc.calculate(förstaNr, andraNr, operator);
             svar = "svaret  blev " + resultat+ ". ";
