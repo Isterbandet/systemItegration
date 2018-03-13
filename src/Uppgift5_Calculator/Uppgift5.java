@@ -39,8 +39,7 @@ public class Uppgift5 {
 
        }
     }
-
-    
+ 
     public static void main(String[] args){
         Uppgift5 ö = new Uppgift5();
     }
